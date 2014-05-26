@@ -1,0 +1,32 @@
+* Docker build of Minecraft Server
+  This repository builds a Docker container hosting a Minecraft
+  server.  I chose to build a Minecraft container because I saw
+  someone else on the Internet do the same for a Docker tutorial, so I
+  decided to join in.
+
+** Run It
+   Assuming you have Docker installed, you may try out this image
+   immediately:
+   #+BEGIN_SRC sh
+     docker run -it --rm stoo/minecraft
+   #+END_SRC
+
+** Build It
+   Run the following to create the images:
+   #+BEGIN_SRC sh
+     make
+   #+END_SRC
+
+   If you want the new image to be tagged as "latest", run make as
+   follows:
+   #+BEGIN_SRC sh
+     make latest
+   #+END_SRC
+
+** Host Interface
+   The container defines a volume at /minecraft and exposes
+   port 25565.
+
+** Dependencies
+   - GNU Make
+   - Docker
